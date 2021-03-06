@@ -2,13 +2,16 @@ import React from 'react';
 import { FlatList } from 'react-native-gesture-handler'
 import  {CATEGORIES}  from '../../data/Dummy-data'
 import CompanyGridTitle from '../../components/CompanyGridTitle'
+import {View } from 'react-native'
+import AllStyle from '../../AllStyle'
+
 const SuperCompanies = props =>{
 
   const renderGridItem = itemData =>{
     return(
-      <CompanyGridTitle 
+          <CompanyGridTitle 
       title={itemData.item.title}
-      color={itemData.item.color}
+      companyImage={itemData.item.companyImage}
       onSelect={()=>{
         props.navigation.navigate({routeName: 'Sub_Companies',
         params:{
@@ -16,15 +19,18 @@ const SuperCompanies = props =>{
         }
       });
       }}/>
+     
     );
   };
   
   return (
+    
   <FlatList 
   keyExtractor={(item,index)=> item.id}
   data={CATEGORIES}
   renderItem={renderGridItem} 
-  numColumns={1}/>
+  />
+  
 );
 };
 

@@ -6,15 +6,14 @@ Platform,
 import AllStyle from '../AllStyle'
  
 
-const CompanyGridTitle = props => {
+const SubCompanyGridTitle = props => {
 let TouchableCom = TouchableOpacity;
 
 if (Platform.OS==="android" && Platform.Version >= 21){
   TouchableCom = TouchableNativeFeedback;
 }
   return(
-    
-  <View style={AllStyle.mainConmpaniesDiv}>
+    <View style={AllStyle.mainConmpaniesDiv}>
     <TouchableCom style={{flex:1}}
       onPress={props.onSelect}>
       <View  style={AllStyle.superCompany}>
@@ -30,4 +29,4 @@ if (Platform.OS==="android" && Platform.Version >= 21){
       
   );
 };
-export default CompanyGridTitle
+export default SubCompanyGridTitle

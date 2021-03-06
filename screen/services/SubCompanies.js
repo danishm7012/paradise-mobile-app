@@ -1,22 +1,40 @@
 import React from 'react';
-import {View , Text , Button} from 'react-native';
+import {View ,FlatList, Text , Button} from 'react-native';
 import AllStyle from "../../AllStyle";
-import {CATEGORIES} from '../../data/Dummy-data';
+import {CATEGORIES,SUBCOMPANIESMODELDATA} from '../../data/Dummy-data';
+import SubCompanyGridTitle from '../../components/SubCompanyGridTitle';
 
 const SubCompanies = props =>{
 
   const catId = props.navigation.getParam('categId');
-  const selectedCompany = CATEGORIES.find(cat =>cat.id===catId);
+  const displayedSubCompanies = SUBCOMPANIESMODELDATA.filter(
+    company=> company.companyIds.indexOf(catId) >= 0 );
+
+    const renderCompanyItem = itemData =>{
+      return(
+            <SubCompanyGridTitle
+        title={itemData.item.title}
+         companyImage={itemData.item.companyImage}
+        onSelect={()=>{
+          props.navigation.navigate({routeName: 'Company_Detail',
+          params:{
+            categId : itemData.item.id
+          }
+        });
+        }}/>
+
+      );
+    };
+
+
   return(
   <View style={AllStyle.myOtherClass}>
-    <Text style={AllStyle.myClass}>Welcome to services Screen !</Text>
-    <Text style={AllStyle.myClass}>{selectedCompany.title}</Text>
-    <Button title='Go to Detail' onPress={()=>{
-      props.navigation.navigate('Company_Detail')
-    }}/>
-    <Button title="Go Back" onPress={()=>{
-      props.navigation.goBack();
-    }}/>
+    <FlatList data={displayedSubCompanies}
+      keyExtractor={(item,index)=> item.id}
+     renderItem={renderCompanyItem}
+  />
+
+
   </View>
 );
 };
@@ -25,8 +43,9 @@ SubCompanies.navigationOptions = navigationData => {
   const selectedCompany = CATEGORIES.find(cat =>cat.id===catId);
   return{
     headerTitle: selectedCompany.title,
- 
+
+
       };
-  
+
 };
 export default SubCompanies;
