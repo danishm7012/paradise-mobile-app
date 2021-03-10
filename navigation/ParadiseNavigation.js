@@ -12,14 +12,16 @@ import ContactUs from '../screen/ContactUs'
 import {Platform } from "react-native"
 import Color from '../colors/Color'
 import {Ionicons} from '@expo/vector-icons';
+import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
+import { createDrawerNavigator } from 'react-navigation-drawer'
+
+
 
 const ServiceNavigator = createStackNavigator({
   
-  Super_Companies: {screen: SuperCompanies,
-    navigationOptions:{
-      headerTitle:'Home'
+  Super_Companies: {
+    screen: SuperCompanies,
     },
-  },
   Sub_Companies:
   {
     screen: SubCompanies,
@@ -42,44 +44,63 @@ const ServiceNavigator = createStackNavigator({
   }
 });
 
-const CompaniesTabNavigator = createBottomTabNavigator ({
+const tabScreenConfig = {
   Home: {
   screen: ServiceNavigator,
   navigationOptions:{
     tabBarIcon: (tabInfo) => {
       return <Ionicons name = 'ios-home' size={25} color={tabInfo.tintColor}/>
-    }
-  }    
+    },
+    tabBarColor: Color.accentColour
+  },
+      
 },
   AboutUs:{
     screen: About,
     navigationOptions:{
       tabBarIcon: (tabInfo) => {
   return <Ionicons name = 'ios-person-add-outline'size={25} color={tabInfo.tintColor}/>
-        
-      }
-    }
+    },
+    tabBarColor: Color.primaryColour
+
+  },
   },
   Partnership: {
     screen: Partnership,
     navigationOptions:{
       tabBarIcon: (tabInfo) => {
   return <Ionicons name = 'ios-accessibility-outline'size={25} color={tabInfo.tintColor}/>
-      }
-    }
+      },
+    tabBarColor: Color.accentColour
+
+    },
   },
   ContactUs: { 
     screen:ContactUs,
     navigationOptions:{
       tabBarIcon: (tabInfo) => {
         return <Ionicons name = 'ios-call-outline'size={25} color={tabInfo.tintColor}/>
-      }
-    }
-  }
+      },
+    tabBarColor: Color.primaryColour
 
-},{
+    },
+  },
+
+};
+
+const CompaniesTabNavigator = Platform.OS==='android'? createMaterialBottomTabNavigator(tabScreenConfig, {
+  activeTintColor: 'white',
+  shifting:true
+}) 
+: createBottomTabNavigator (
+  tabScreenConfig,
+  {
   tabBarOptions:{
     activeTintColor: Color.primaryColour
   },
+});
+const MainDrawerNavigator = createDrawerNavigator({
+  companiesDrawer: CompaniesTabNavigator,
+  About: About,
 });
 export default createAppContainer(CompaniesTabNavigator);

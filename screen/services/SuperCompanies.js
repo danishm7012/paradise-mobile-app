@@ -4,6 +4,8 @@ import  {CATEGORIES}  from '../../data/Dummy-data'
 import CompanyGridTitle from '../../components/CompanyGridTitle'
 import {View } from 'react-native'
 import AllStyle from '../../AllStyle'
+import {HeaderButtons, Item} from 'react-navigation-header-buttons'
+import HeaderButton from '../../components/HeaderButton'
 
 const SuperCompanies = props =>{
 
@@ -32,6 +34,19 @@ const SuperCompanies = props =>{
   />
   </View>
 );
+};
+
+SuperCompanies.navigationOptions = navData => {
+  return{
+    headerTitle:'Home',
+  headerLeft: (
+  <HeaderButtons HeaderButtonComponent={HeaderButton}>
+    <Item title="Menu" iconName="ios-menu" onPress={() => {
+      navData.navigation.toggleDrawer();
+    }} />
+
+  </HeaderButtons>
+)};      
 };
 
 export default SuperCompanies;

@@ -45,8 +45,7 @@ companyOverlayText:{
 flex:1,
 backgroundColor:'rgba(18,18,18,0.7)',
 alignSelf:'stretch',
-justifyContent:'flex-start',
-alignItems:'flex-start',
+
   //top:50,
   // left:0,
   // right:0,
@@ -56,6 +55,12 @@ alignItems:'flex-start',
   // textAlign:'center',
   // justifyContent:'center',
  
+},
+supComTopTextView:{
+  flex:1,
+  justifyContent:'center',
+  alignItems:'center',
+  
 },
 // supercompanyTextView:{
 //   flex:1,
@@ -73,9 +78,22 @@ companyText:{
   fontSize:14,
   color:'white',
   padding:10,
-  borderRadius:20,
-  backgroundColor:'#6c398f',
+  //borderRadius:20,
+  backgroundColor:'#c11e8a',
 },
+//compBottomTextView:{
+  //flex:1,
+  //flexDirection:'row',
+  //justifyContent:'center',
+  //alignItems:'center',
+  //backgroundColor:'#121212',
+  // alignSelf:''
+//},
+//supCompBottomText:{
+//flex:1,
+//color:'white'
+
+//},
 //  *************** Super___Companies Screen Style END *********************
 
 //  *************** Sub___Companies Screen Style Start *********************
