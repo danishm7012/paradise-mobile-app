@@ -24,13 +24,13 @@ const SuperCompanies = props =>{
   };
   
   return (
-    
+  <View style={{width:'100%'}}>    
   <FlatList 
   keyExtractor={(item,index)=> item.id}
   data={CATEGORIES}
   renderItem={renderGridItem} 
   />
-  
+  </View>
 );
 };
 

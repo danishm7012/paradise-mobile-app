@@ -4,9 +4,10 @@ import AllStyle from "../AllStyle";
 
 
 const Partnership = props =>{
+  return(
   <View style={AllStyle.myOtherClass}>
     <Text>Our strength !</Text>
   </View>
-
+  );
 };
 export default Partnership;

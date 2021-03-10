@@ -20,7 +20,10 @@ if (Platform.OS==="android" && Platform.Version >= 21){
       <View  style={AllStyle.superCompany}>
         <ImageBackground source={props.companyImage} style={AllStyle.companyImages} resizeMode='cover' >
         <View style={AllStyle.companyOverlayText}>
+          
         <Text style={AllStyle.companyText}>{props.title}</Text>
+        
+        
         </View>
 
         </ImageBackground>

@@ -3,13 +3,12 @@ class SubCompaniesModelData {
     id,
     companyIds,
     title,
-    companyImage,
- 
-    ){
+    companyImagess)
+    {
     this.id = id;
     this.companyIds = companyIds;
     this.title = title;
-    this.companyImage = companyImage;
+    this.companyImagess = companyImagess;
   }
 }
 export default SubCompaniesModelData;

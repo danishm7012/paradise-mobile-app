@@ -15,32 +15,57 @@ export const CATEGORIES = [
       'm1',
       ['c1'],
       'Real Estate',
-      require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+      require('../assets/NewLogos/cpec-logo.png')),
     new SubCompaniesModelData(
       'm2',
       ['c1'],
       'Import and Export',
-      require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+      require('../assets/NewLogos/cpec-logo.png')),
+      
     new SubCompaniesModelData(
       'm3',
       ['c1'],
       'Marketing and Agency',
-      require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+      require('../assets/NewLogos/cpec-logo.png')),
+
     new SubCompaniesModelData(
       'm4',
       ['c1'],
       'Education',
-      require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+      require('../assets/NewLogos/cpec-logo.png')),
+
     new SubCompaniesModelData(
       'm5',
       ['c1'],
       'Evaluation',
-      require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+      require('../assets/NewLogos/cpec-logo.png')),
+
     new SubCompaniesModelData(
       'm6',
       ['c1'],
       'Shipping and Logistic',
-      require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+      require('../assets/NewLogos/cpec-logo.png')),
+      new SubCompaniesModelData(
+        'm7',
+        ['c1'],
+        'Shipping and Logistic',
+        require('../assets/NewLogos/cpec-logo.png')),
+        new SubCompaniesModelData(
+          'm8',
+          ['c1'],
+          'Shipping and Logistic',
+          require('../assets/NewLogos/cpec-logo.png')),
+          new SubCompaniesModelData(
+            'm9',
+            ['c1'],
+            'Shipping and Logistic',
+            require('../assets/NewLogos/cpec-logo.png')),
+            new SubCompaniesModelData(
+              'm10',
+              ['c1'],
+              'Shipping and Logistic',
+              require('../assets/NewLogos/cpec-logo.png')),
+                    
    
    
    
@@ -218,8 +243,113 @@ export const CATEGORIES = [
                 'm6',
                 ['c6'],
                 'Shipping and Logistic',
+                require('../assets/newBanner/al-hafeez-properties-banner.jpg')),   
+   
+
+
+
+
+                new SubCompaniesModelData(
+                  'm1',
+                  ['c7'],
+                  'Real Estate',
+                  require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                new SubCompaniesModelData(
+                  'm2',
+                  ['c7'],
+                  'Import and Export',
+                  require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                new SubCompaniesModelData(
+                  'm3',
+                  ['c7'],
+                  'Marketing and Agency',
+                  require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                new SubCompaniesModelData(
+                  'm4',
+                  ['c7'],
+                  'Education',
+                  require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                new SubCompaniesModelData(
+                  'm5',
+                  ['c7'],
+                  'Evaluation',
+                  require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                new SubCompaniesModelData(
+                  'm6',
+                  ['c7'],
+                  'Shipping and Logistic',
+                  require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                  
+                  
+
+
+                  new SubCompaniesModelData(
+                    'm1',
+                    ['c8'],
+                    'Real Estate',
+                    require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                  new SubCompaniesModelData(
+                    'm2',
+                    ['c8'],
+                    'Import and Export',
+                    require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                  new SubCompaniesModelData(
+                    'm3',
+                    ['c8'],
+                    'Marketing and Agency',
+                    require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                  new SubCompaniesModelData(
+                    'm4',
+                    ['c8'],
+                    'Education',
+                    require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                  new SubCompaniesModelData(
+                    'm5',
+                    ['c8'],
+                    'Evaluation',
+                    require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+                  new SubCompaniesModelData(
+                    'm6',
+                    ['c8'],
+                    'Shipping and Logistic',
+              require('../assets/newBanner/al-hafeez-properties-banner.jpg')),   
+       
+
+      
+
+    
+              new SubCompaniesModelData(
+                'm1',
+                ['c9'],
+                'Real Estate',
+                require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+              new SubCompaniesModelData(
+                'm2',
+                ['c9'],
+                'Import and Export',
+                require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+              new SubCompaniesModelData(
+                'm3',
+                ['c9'],
+                'Marketing and Agency',
+                require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+              new SubCompaniesModelData(
+                'm4',
+                ['c9'],
+                'Education',
+                require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+              new SubCompaniesModelData(
+                'm5',
+                ['c9'],
+                'Evaluation',
+                require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+              new SubCompaniesModelData(
+                'm6',
+                ['c9'],
+                'Shipping and Logistic',
                 require('../assets/newBanner/al-hafeez-properties-banner.jpg'))   
    
+     
    
 ];
 
