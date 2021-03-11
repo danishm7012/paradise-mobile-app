@@ -21,12 +21,11 @@ const ServiceNavigator = createStackNavigator({
   
   Super_Companies: {
     screen: SuperCompanies,
-    },
+},
   Sub_Companies:
   {
     screen: SubCompanies,
-    
-  },
+},
   Company_Detail: CompanyDetail
 },
 
@@ -101,6 +100,6 @@ const CompaniesTabNavigator = Platform.OS==='android'? createMaterialBottomTabNa
 });
 const MainDrawerNavigator = createDrawerNavigator({
   companiesDrawer: CompaniesTabNavigator,
-  About: About,
+
 });
-export default createAppContainer(CompaniesTabNavigator);
+export default createAppContainer(MainDrawerNavigator);

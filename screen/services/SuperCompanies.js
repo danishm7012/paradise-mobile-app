@@ -7,6 +7,9 @@ import AllStyle from '../../AllStyle'
 import {HeaderButtons, Item} from 'react-navigation-header-buttons'
 import HeaderButton from '../../components/HeaderButton'
 
+
+//import {MaterialHeaderButtons} from '../../components/MyHeaderButton'
+
 const SuperCompanies = props =>{
 
   const renderGridItem = itemData =>{
@@ -37,16 +40,20 @@ const SuperCompanies = props =>{
 };
 
 SuperCompanies.navigationOptions = navData => {
-  return{
-    headerTitle:'Home',
+  return{    
+  headerTitle:'Home',
   headerLeft: (
-  <HeaderButtons HeaderButtonComponent={HeaderButton}>
-    <Item title="Menu" iconName="ios-menu" onPress={() => {
+  <HeaderButtons HeaderButtonComponent = {HeaderButton}>
+    <Item 
+    title='Menu' 
+    iconName='ios-menu' 
+    onPress={() => {
       navData.navigation.toggleDrawer();
-    }} />
+    }} /> 
 
   </HeaderButtons>
-)};      
-};
+)
+  }
+}
 
 export default SuperCompanies;

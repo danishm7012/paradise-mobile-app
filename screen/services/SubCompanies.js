@@ -56,7 +56,7 @@ SubCompanies.navigationOptions = navigationData => {
   const selectedCompany = CATEGORIES.find(cat =>cat.id===catId);
   return{
     headerTitle: selectedCompany.title,
-
+    headerRight: <Text>Fav!!!</Text>
 
       };
 

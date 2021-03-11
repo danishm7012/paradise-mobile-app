@@ -23,15 +23,14 @@ if (Platform.OS==="android" && Platform.Version >= 21){
           <View style={AllStyle.supComTopTextView}>
         <Text style={AllStyle.companyText}>{props.title}</Text>
         </View>
-        <View style={AllStyle.compBottomTextView}>
+        {/* <View style={AllStyle.compBottomTextView}>
         
-         <Text style={AllStyle.supCompBottomText}>{props.title}</Text>
-        
-        
+         <Text style={AllStyle.supCompBottomText}></Text>
+       
         <Text style={AllStyle.supCompBottomText}>View Detail</Text>
         
         
-        </View>
+        </View> */}
         
         </View>
         

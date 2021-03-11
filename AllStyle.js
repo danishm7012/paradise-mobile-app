@@ -43,7 +43,7 @@ companyImages:{
 },
 companyOverlayText:{
 flex:1,
-backgroundColor:'rgba(18,18,18,0.7)',
+backgroundColor:'rgba(18,18,18,0.1)',
 alignSelf:'stretch',
 
   //top:50,
@@ -75,12 +75,27 @@ companyText:{
   
   // fontWeight:'600',
   // fontFamily: 'open-sans-bold',
-  fontSize:14,
-  color:'white',
-  padding:10,
+  fontSize:24,
+  color:'#121212',
+  padding:12,
   //borderRadius:20,
-  backgroundColor:'#c11e8a',
+  backgroundColor:'rgba(255,255,255,0.8)',
+
 },
+compBottomTextView:{
+  
+  flexDirection:'row',
+  justifyContent:'flex-end',
+  justifyContent:'space-between',
+  alignItems:'flex-end',
+  backgroundColor:'rgba(108,57,143,0.6)',
+
+},
+supCompBottomText:{
+  color:'white',
+  padding:8,
+},
+
 //compBottomTextView:{
   //flex:1,
   //flexDirection:'row',

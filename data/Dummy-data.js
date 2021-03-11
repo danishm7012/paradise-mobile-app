@@ -2,11 +2,11 @@ import Category from '../models/Categaroy';
 import SubCompaniesModelData from '../models/SubCompaniesModelData';
 
 export const CATEGORIES = [
-  new Category('c1','Real Estate',require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+  new Category('c1','Real Estate Services',require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
   new Category('c2','Import and Export',require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
   new Category('c3','Marketing and Agency',require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
-  new Category('c4','Education',require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
-  new Category('c5','Evaluation',require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+  new Category('c4','Education Services',require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
+  new Category('c5','Evaluation Services',require('../assets/newBanner/al-hafeez-properties-banner.jpg')),
   new Category('c6','Shipping and Logistic',require('../assets/newBanner/al-hafeez-properties-banner.jpg'))
   ];
 
