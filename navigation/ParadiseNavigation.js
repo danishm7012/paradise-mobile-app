@@ -1,68 +1,67 @@
 import React from 'react';
 import {StyleSheet,Image, View,Text, SafeAreaView} from 'react-native'
-import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
-import {createBottomTabNavigator} from "react-navigation-tabs"
-import SuperCompanies from '../screen/services/SuperCompanies'
-import SubCompanies from '../screen/services/SubCompanies'
-import CompanyDetail from '../screen/services/CompanyDetail'
-import Home from '../screen/Home'
-import Partnership from '../screen/Partnership'
-import About from '../screen/About'
-import ContactUs from '../screen/ContactUs'
-import {Platform } from "react-native"
-import Color from '../colors/Color'
-import {Ionicons} from '@expo/vector-icons';
-import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
 import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer'
 import { ScrollView } from 'react-native-gesture-handler'
+//import CompaniesTabNavigator from './BottomTabNavigator'
+import AboutStackNavigator from './AboutStackNavigator'
+import ContactUsStackNavigator from './ContactUsStackNavigator'
+import PartnershipStackNavigator from './PartnersStackNavigator'
+import StackNavigator from './StackNavigator'
+import Color from '../colors/Color'
+import {createBottomTabNavigator} from "react-navigation-tabs"
+import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
+import {Platform } from "react-native"
+import {Ionicons} from '@expo/vector-icons'
+import TermConditionStackNavigator from './TermConditionStackNavigator'
+import RQStackNavigator from './RQStackNavigator'
+import FeedBackStackNavigator from './FeedBackStackNavigator'
 
-
-
-const ServiceNavigator = createStackNavigator({
+// const ServiceNavigator = createStackNavigator({
   
-  Super_Companies: {
-    screen: SuperCompanies,
-},
-  Sub_Companies:
-  {
-    screen: SubCompanies,
-},
-  Company_Detail:{
-    screen :CompanyDetail,
-  },
+//   Super_Companies: {
+//     screen: SuperCompanies,
+// },
+//   Sub_Companies:
+//   {
+//     screen: SubCompanies,
+// },
+//   Company_Detail:{
+//     screen :CompanyDetail,
+//   },
 
-},
-{
-  mode:'modal',
-  defaultNavigationOptions:{
-    headerTitleAlign:'center',
-    headerStyle:{
-  backgroundColor: Platform.OS==='android' ? Color.accentColour : Color.primaryColour
-      },
-      headerTintColor: 'white'
-  }
-});
+// },
+// {
+//   mode:'modal',
+//   defaultNavigationOptions:{
+//     headerTitleAlign:'center',
+//     headerStyle:{
+//   backgroundColor: Platform.OS==='android' ? Color.accentColour : Color.primaryColour
+//       },
+//       headerTintColor: 'white'
+//   }
+// });
 
-const AboutStackNavigator = createStackNavigator({
-  AboutUs:{screen:About,
-    navigationOptions:{
-      headerTitleAlign:'center',
-    headerStyle:{
-  backgroundColor: Platform.OS==='android' ? Color.accentColour : Color.primaryColour
-      },
-      headerTintColor: 'white',
-    },
+
+// const AboutStackNavigator = createStackNavigator({
+//   AboutUs:{screen:About,
+//     navigationOptions:{
+//       headerTitleAlign:'center',
+//     headerStyle:{
+//   backgroundColor: Platform.OS==='android' ? Color.accentColour : Color.primaryColour
+//       },
+//       headerTintColor: 'white',
+//     },
   
-  },
+//   },
 
   
-});
+// });
 
 
 const tabScreenConfig = {
   Home: {
-  screen: ServiceNavigator,
+  screen: StackNavigator,
   navigationOptions:{
     tabBarIcon: (tabInfo) => {
       return <Ionicons name = 'ios-home' size={25} color={tabInfo.tintColor}/>
@@ -72,7 +71,7 @@ const tabScreenConfig = {
       
 },
   AboutUs:{
-    screen: About,
+    screen: AboutStackNavigator,
     navigationOptions:{
       tabBarIcon: (tabInfo) => {
   return <Ionicons name = 'ios-person-add-outline'size={25} color={tabInfo.tintColor}/>
@@ -82,7 +81,7 @@ const tabScreenConfig = {
   },
   },
   Partnership: {
-    screen: Partnership,
+    screen: PartnershipStackNavigator,
     navigationOptions:{
       tabBarIcon: (tabInfo) => {
   return <Ionicons name = 'ios-accessibility-outline'size={25} color={tabInfo.tintColor}/>
@@ -92,7 +91,7 @@ const tabScreenConfig = {
     },
   },
   ContactUs: { 
-    screen:ContactUs,
+    screen:ContactUsStackNavigator,
     navigationOptions:{
       tabBarIcon: (tabInfo) => {
         return <Ionicons name = 'ios-call-outline'size={25} color={tabInfo.tintColor}/>
@@ -132,6 +131,8 @@ const MainDrawerNavigator = createDrawerNavigator({
     }
   
   },
+
+
   About:{
     screen:AboutStackNavigator,
     navigationOptions:{
@@ -145,8 +146,10 @@ const MainDrawerNavigator = createDrawerNavigator({
       drawerLabel:'AboutUs',
     }
   },
+
+
   Partners:{
-    screen:Partnership,
+    screen:PartnershipStackNavigator,
     navigationOptions: {
       drawerIcon: () => (
         <Image
@@ -157,8 +160,10 @@ const MainDrawerNavigator = createDrawerNavigator({
      drawerLabel:'Partners' 
     }
   },
+
+
 ContactUs:{
-  screen: ContactUs,
+  screen: ContactUsStackNavigator,
   navigationOptions:{
     drawerIcon: () => (
       <Image
@@ -169,6 +174,50 @@ ContactUs:{
     drawerLabel:'ContactUs',
   }
 },
+
+
+TermCondition:{
+  screen: TermConditionStackNavigator,
+  navigationOptions:{
+    drawerIcon: () => (
+      <Image
+        source={require('../assets/icon.png')}
+        style={[styles.icon, { tintColor: 'white' }]}
+      />
+    ),
+    drawerLabel:'Term&Condition',
+  }
+},
+
+
+RandQ:{
+  screen: RQStackNavigator,
+  navigationOptions:{
+    drawerIcon: () => (
+      <Image
+        source={require('../assets/icon.png')}
+        style={[styles.icon, { tintColor: 'white' }]}
+      />
+    ),
+    drawerLabel:'R&Q',
+  }
+},
+
+
+FeedBack:{
+  screen: FeedBackStackNavigator,
+  navigationOptions:{
+    drawerIcon: () => (
+      <Image
+        source={require('../assets/icon.png')}
+        style={[styles.icon, { tintColor: 'white' }]}
+      />
+    ),
+    drawerLabel:'Feed Back',
+  }
+},
+
+
 },{
   drawerIcon: ({ tintColor }) => (
     <Image
